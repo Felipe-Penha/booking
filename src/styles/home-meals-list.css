@@ -1,0 +1,27 @@
+.meals {
+  margin: 0 16px 0 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.meals-container {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.meal-h2 {
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.meal-description {
+  font-size: 16px;
+  color: #495e57;
+}
+
+.meal-price {
+  font-size: 18px;
+  color: #495e57;
+  font-weight: 500;
+}

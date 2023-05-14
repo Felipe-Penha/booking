@@ -1,0 +1,81 @@
+.table-reservation-main {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.table-reservation-img {
+  overflow: hidden;
+  width: 100%;
+  border-radius: 16px;
+  object-fit: cover;
+}
+
+.table-reservation-img img {
+  width: 100%;
+}
+
+.table-reservation-form {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.table-reservation-form-title,
+.radio-label {
+  font-size: 20px;
+  text-transform: uppercase;
+  color: white;
+  font-weight: 500;
+}
+
+.table-reservation-date-time-picker {
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#date-picker,
+#time-picker,
+#n-diners,
+.occasion {
+  border-radius: 16px;
+  border: none;
+  padding: 8px;
+  color: #495e57;
+}
+
+.radio-buttons-1,
+.radio-buttons-2 {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: left;
+  gap: 16px;
+}
+
+.standard,
+.outside {
+  font-size: 18px;
+  font-weight: 400;
+  color: #efefed;
+}
+
+.table-reservation-submit-button {
+  padding: 16px;
+  background-color: #f4ce14;
+  color: #495e57;
+  font-size: 16px;
+  font-weight: 700;
+  border-radius: 18px;
+  border: none;
+  width: 100%;
+  cursor: pointer;
+}
+
+.a-btn {
+  text-decoration: none;
+  color: #495e57;
+}
