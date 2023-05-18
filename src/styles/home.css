@@ -1,0 +1,114 @@
+.home-page {
+  display: flex;
+  flex-direction: column;
+  gap: var(--basePadding);
+}
+
+/* Hero styles */
+
+.home-hero {
+  background-color: var(--secondaryColor);
+  padding: var(--doubleBasePadding);
+  display: flex;
+  flex-direction: column;
+  gap: var(--basePadding);
+  align-items: center;
+  justify-content: space-between;
+  min-height: 50vh;
+}
+
+.heading {
+  text-align: center;
+}
+
+.heading-h1 {
+  font-size: var(--heroTitle);
+  color: var(--primaryColor);
+}
+
+.heading-h2 {
+  font-size: var(--heroSubTitle);
+  color: var(--tertiaryColor);
+  transform: translateY(-20px);
+}
+
+.hero-description {
+  font-size: var(--descriptionText);
+  font-weight: var(--descriptionTextWeight);
+  color: var(--tertiaryColor);
+}
+
+.hero-cta {
+  background-color: var(--primaryColor);
+  color: var(--secondaryColor);
+  padding: var(--halfBasePadding) var(--basePadding);
+  text-decoration: none;
+  border-radius: var(--borderRadius);
+  font-size: var(--descriptionText);
+  font-weight: var(--cardTitleWeight);
+}
+
+/* Pills */
+
+.pills-container {
+  padding: 0 var(--basePadding);
+  display: grid;
+  flex-direction: column;
+  gap: var(--basePadding);
+}
+
+.pills-section-title {
+  font-size: var(--cardTitle);
+  text-transform: uppercase;
+  font-weight: var(--cardTitleWeight);
+}
+
+.pills {
+  width: 100%;
+  display: flex;
+  gap: var(--halfBasePadding);
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.pill {
+  background-color: var(--tertiaryColor);
+  padding: var(--halfBasePadding) var(--basePadding);
+  border-radius: var(--borderRadius);
+  font-size: var(--cardTitle);
+  font-weight: var(--descriptionTextWeight);
+  color: var(--secondaryColor);
+}
+
+/* Meals List */
+
+.meals-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--halfBasePadding);
+  padding: 0 var(--basePadding);
+}
+
+.meal-container {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.meal {
+  font-size: var(--cardTitle);
+  font-weight: var(--cardTitleWeight);
+}
+
+.description {
+  font-size: var(--regularText);
+  font-weight: var(--regularTextWeight);
+  color: var(--secondaryColor);
+}
+
+.price {
+  font-size: var(--regularText);
+  color: var(--secondaryColor);
+}

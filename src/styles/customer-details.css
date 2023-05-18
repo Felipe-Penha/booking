@@ -1,3 +1,38 @@
-.customer-details-main {
-  background-color: #495e57;
+.customer-details-page {
+  background-color: var(--secondaryColor);
+  min-height: 100vh;
+  padding: var(--doubleBasePadding) var(--basePadding);
+  padding-bottom: var(--basePadding);
+  display: flex;
+  flex-direction: column;
+  gap: var(--basePadding);
+}
+
+textarea {
+  padding: var(--basePadding);
+  border-radius: var(--basePadding);
+  border: none;
+  color: var(--secondaryColor);
+  appearance: none;
+  font-size: var(--cardTitle);
+  height: 150px;
+}
+
+.customer-container {
+  display: flex;
+  flex-direction: column;
+  gap: var(--doubleBasePadding);
+}
+
+.customer-form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--doubleBasePadding);
+}
+
+.customer-title {
+  font-size: var(--cardTitle);
+  font-weight: (--cardTitleWeight);
+  color: var(--tertiaryColor);
+  text-transform: uppercase;
 }

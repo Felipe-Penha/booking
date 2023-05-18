@@ -1,10 +1,10 @@
-import TableReservationForm from './components/TableReservationForm';
-import TableReservationHero from './components/TableReservationHero';
 import './styles/table-reservation.css';
+import TableReservationHero from './components/TableReservationHero';
+import TableReservationForm from './components/TableReservationForm';
 
 function TableReservation() {
   return (
-    <div className='table-reservation'>
+    <div className='table-reservation-container'>
       <TableReservationHero />
       <TableReservationForm />
     </div>

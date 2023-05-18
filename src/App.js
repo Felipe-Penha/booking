@@ -1,7 +1,6 @@
-import logo from './logo.svg';
 import './App.css';
 import { Routes, Route } from 'react-router-dom';
-import NavBar from './components/NavBar';
+import Nav from './components/Nav';
 import Home from './Home';
 import TableReservation from './TableReservation';
 import CustomerDetails from './CustomerDetails';
@@ -11,7 +10,7 @@ function App() {
   document.title = 'Little Lemon';
   return (
     <div className='App'>
-      <NavBar />
+      <Nav />
       <Routes>
         <Route path='/' element={<Home />}></Route>
         <Route path='/table-reservation' element={<TableReservation />}></Route>

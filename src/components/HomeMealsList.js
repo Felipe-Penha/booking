@@ -1,10 +1,8 @@
-import '../styles/home-meals-list.css';
-
 function HomeMealsList() {
   const meals = [
     {
       id: 1,
-      meal: 'Greek Sald',
+      meal: 'Greek Salad',
       description:
         'The famous greek salad of crispy lettuce, peppers, olives and our Chicago style feta cheese, garnished with crunchy garlic and rosemary croutons.',
       price: '$ 12.99',
@@ -39,19 +37,17 @@ function HomeMealsList() {
     },
   ];
 
-  const mealsList = meals.map(({ id, meal, description, price }) => {
+  const mealsMap = meals.map(({ id, meal, description, price }) => {
     return (
-      <div key={id} className={`meal-${id} meals-container`}>
-        <h2 className={`meal-${id}-h2 meal-h2`}>{meal}</h2>
-        <p className={`meal-${id}-description meal-description`}>
-          {description}
-        </p>
-        <p className={`meal-${id}-price meal-price`}>{price}</p>
+      <div className='meal-container'>
+        <h2 className={`meal meal-${id}`}>{meal}</h2>
+        <p className={`description description-${id}`}>{description}</p>
+        <p className={`price price-${id}`}>{price}</p>
       </div>
     );
   });
 
-  return <div className='meals'>{mealsList}</div>;
+  return <div className='meals-list'>{mealsMap}</div>;
 }
 
 export default HomeMealsList;

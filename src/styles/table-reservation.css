@@ -1,6 +1,138 @@
-.table-reservation {
-  background-color: #495e57;
-  padding: 0 16px 16px 16px;
-  width: 100vw;
-  max-width: 1000px;
+.table-reservation-container {
+  width: 100%;
+  min-height: 100vh;
+  background-color: var(--secondaryColor);
+  padding: var(--doubleBasePadding) var(--basePadding);
+  padding-bottom: var(--basePadding);
+  display: flex;
+  flex-direction: column;
+  gap: var(--basePadding);
+}
+
+/* Table reservation hero */
+
+.table-heading {
+  margin-bottom: var(--basePadding);
+}
+
+.table-hero-h1 {
+  font-size: var(--heroTitle);
+  color: var(--primaryColor);
+}
+
+.table-hero-h2 {
+  font-size: var(--heroSubTitle);
+  color: var(--tertiaryColor);
+  transform: translateY(-20px);
+}
+
+/* Table reservation form */
+
+.table-form-container {
+  display: flex;
+  flex-direction: column;
+  gap: var(--basePadding);
+  height: 100%;
+}
+
+.table-form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--basePadding);
+  height: 100%;
+}
+
+.table-form-title {
+  font-size: var(--cardTitle);
+  font-weight: (--cardTitleWeight);
+  color: var(--tertiaryColor);
+  text-transform: uppercase;
+}
+
+input,
+select {
+  padding: var(--halfBasePadding);
+  border-radius: var(--basePadding);
+  border: none;
+  color: var(--secondaryColor);
+  appearance: none;
+  text-align: center;
+  font-size: var(--cardTitle);
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type='number'] {
+  -moz-appearance: textfield;
+}
+
+.date-time {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  gap: var(--basePadding);
+}
+
+.date-time-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--halfBasePadding);
+  margin-bottom: var(--halfBasePadding);
+}
+
+.date-time-label {
+  color: var(--tertiaryColor);
+  font-size: var(--regularText);
+  font-weight: var(--regularTextWeight);
+  text-transform: uppercase;
+}
+
+.occasion-label,
+.seating-label {
+  color: var(--tertiaryColor);
+  font-size: var(--cardTitle);
+  font-weight: var(--regularTextWeight);
+  text-transform: uppercase;
+}
+
+.table-form-button {
+  align-self: center;
+  padding: var(--halfBasePadding) var(--basePadding);
+  border-radius: var(--basePadding);
+  background-color: var(--primaryColor);
+  color: var(--secondaryColor);
+  text-decoration: none;
+  width: 100%;
+  text-align: center;
+  margin-top: var(--doubleBasePadding);
+  font-size: var(--cardTitle);
+  font-weight: var(--cardTitleWeight);
+  border: none;
+  cursor: pointer;
+}
+
+.radio-item {
+  display: flex;
+  flex-direction: row;
+  gap: var(--basePadding);
+}
+
+input[type='radio'] {
+  background-color: var(--tertiaryColor);
+}
+
+.radio-label {
+  color: var(--tertiaryColor);
+  font-size: var(--regularText);
+  font-weight: var(--regularTextWeight);
+}
+
+.table-img {
+  border-radius: var(--basePadding);
 }

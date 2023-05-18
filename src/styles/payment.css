@@ -1,0 +1,45 @@
+.payment-page {
+  width: 100%;
+  min-height: 100vh;
+  background-color: var(--secondaryColor);
+  padding: var(--doubleBasePadding) var(--basePadding);
+  padding-bottom: var(--basePadding);
+  display: flex;
+  flex-direction: column;
+  gap: var(--basePadding);
+}
+
+.payment-title {
+  font-size: var(--cardTitle);
+  font-weight: (--cardTitleWeight);
+  color: var(--tertiaryColor);
+  text-transform: uppercase;
+}
+
+.payment-form-container,
+.payment-form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--doubleBasePadding);
+}
+
+.exp-cvv {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--basePadding);
+}
+
+.exp-cvv-item {
+  display: flex;
+  flex-direction: column;
+  gap: var(--halfBasePadding);
+  align-items: center;
+}
+
+.exp-cvv-label {
+  color: var(--tertiaryColor);
+  font-size: var(--regularText);
+  font-weight: var(--regularTextWeight);
+  text-transform: uppercase;
+}

@@ -5,12 +5,39 @@ body {
   flex-direction: column;
   gap: 16px;
   align-items: center;
-  padding-top: 16px;
+  padding: var(--basePadding) 0;
   font-family: 'Karla', sans-serif;
+  --primaryColor: #f4ce14;
+  --secondaryColor: #495e57;
+  --tertiaryColor: #edefee;
+  --basePadding: 16px;
+  --halfBasePadding: 8px;
+  --doubleBasePadding: 32px;
+  --heroTitle: 64px;
+  --heroSubTitle: 40px;
+  --sectionTitle: 20px;
+  --sectionTitleWeight: 800;
+  --cardTitle: 18px;
+  --cardTitleWeight: 700;
+  --regularText: 16px;
+  --regularTextWeight: 500;
+  --descriptionText: 18px;
+  --descriptionTextWeight: 500;
+  --lineHeight: 1.5;
+  --borderRadius: 16px;
+}
+
+.vsc-initialized {
+  height: 100vh;
 }
 
 .App {
-  max-width: 1000px;
+  width: 100vw;
+  min-height: 100vh;
+}
+
+body::-webkit-scrollbar {
+  display: none;
 }
 
 li {
@@ -19,4 +46,10 @@ li {
 
 h1 {
   font-family: 'Markazi Text', serif;
+}
+
+.required {
+  font-size: var(--descriptionText);
+  font-weight: var(--descriptionTextWeight);
+  color: var(--primaryColor);
 }

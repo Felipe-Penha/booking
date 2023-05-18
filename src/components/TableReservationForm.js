@@ -1,79 +1,106 @@
 import { Link } from 'react-router-dom';
-import '../styles/table-reservation-form.css';
+import { useState, useEffect } from 'react';
 
 function TableReservationForm() {
+  const [date, setDate] = useState();
+  const [time, setTime] = useState();
+  const [nDiners, setnDiners] = useState(1);
+  const [occasion, setOccasion] = useState('Birthday');
+  const [sOptions, setsOptions] = useState('Outside');
+  const [required, setRequired] = useState(false);
+
   return (
-    <main className='table-reservation-main'>
-      <div className='table-reservation-img'>
-        <img src='hero-2.png' />
-      </div>
-
-      <h2 className='table-reservation-form-title'>
-        Find a table for any occasion
-      </h2>
-
-      <form className='table-reservation-form'>
-        <div className='table-reservation-date-time-picker'>
-          <input
-            type='date'
-            placeholder='Date'
-            id='date-picker'
-            name='date-picker'
-          />
-          <input
-            type='time'
-            placeholder='Time'
-            id='time-picker'
-            name='time-picker'
-          />
+    <section className='table-form-container'>
+      <img src='/hero-2.png' className='table-img' />
+      <h2 className='table-form-title'>Find a table for any occasion</h2>
+      <form className='table-form'>
+        <div className='date-time'>
+          <div className='date-time-item'>
+            <label htmlFor='date' className='date-time-label'>
+              Date
+            </label>
+            <input
+              type='date'
+              name='date'
+              id='date'
+              className='date'
+              required
+              value={date}
+              onChange={(e) => setDate(e.target.value)}
+            />
+            {date ? null : <p className='required'>* Required</p>}
+          </div>
+          <div className='date-time-item'>
+            <label htmlFor='time' className='date-time-label'>
+              Time
+            </label>
+            <input
+              type='time'
+              name='time'
+              id='time'
+              className='time'
+              required
+              value={time}
+              onChange={(e) => setTime(e.target.value)}
+            />
+            {time ? null : <p className='required'>* Required</p>}
+          </div>
         </div>
         <input
           placeholder='Number of Diners'
           type='number'
-          id='n-diners'
-          name='n-diners'
+          name='nDiners'
+          id='nDiners'
+          className='nDiners'
+          required
+          value={nDiners}
+          onChange={(e) => setnDiners(e.target.value)}
         />
-
-        <select className='occasion' placeholder='Occasion'>
-          <option>Lunch</option>
-          <option>Breakfast</option>
-          <option>Diner</option>
+        {nDiners > 0 ? null : <p className='required'>* Required</p>}
+        <label htmlFor='occasion' className='occasion-label'>
+          Occasion
+        </label>
+        <select
+          name='occasion'
+          id='occasion'
+          className='occasion'
+          required
+          value={occasion}
+          onChange={(e) => setOccasion(e.target.value)}
+        >
+          <option>None</option>
+          <option>Birthday</option>
+          <option>Anniversary</option>
+          <option>Engagement</option>
+          <option>Other</option>
         </select>
 
-        <label className='radio-label'>Seating options</label>
-        <div className='radio-buttons-1'>
-          <input
-            type='radio'
-            className='seating-radio'
-            value='standard'
-            id='standard'
-            name='outside'
-          />
-          <label className='standard' htmlFor='standard'>
-            Standard
-          </label>
-        </div>
+        <label className='seating-label'>Seating options</label>
 
-        <div className='radio-buttons-2'>
-          <input
-            type='radio'
-            className='seating-radio'
-            value='outside'
-            id='outside'
-            name='outside'
-          />
-          <label className='outside' htmlFor='outside'>
-            Outside
-          </label>
-        </div>
+        <select
+          className='seating-options'
+          name='sOptions'
+          id='sOptions'
+          required
+          value={sOptions}
+          onChange={(e) => setsOptions(e.target.value)}
+        >
+          <option>Standard</option>
+          <option>Outside</option>
+        </select>
 
-        <Link className='a-btn' to='/customer-details'>
-          <button type='submit' className='table-reservation-submit-button'>
-            Lets go
-          </button>
+        <Link
+          className='table-form-button'
+          to={
+            date && time && nDiners && occasion && sOptions
+              ? '/customer-details'
+              : '/table-reservation'
+          }
+        >
+          Lets Go
         </Link>
       </form>
-    </main>
+    </section>
   );
 }
 

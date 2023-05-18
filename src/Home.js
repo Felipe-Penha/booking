@@ -1,17 +1,15 @@
-import Hero from './components/Hero';
-import HomeMain from './components/HomeMain';
-import HomeMainFilter from './components/HomeMainFilter';
+import './styles/home.css';
+import HomeHero from './components/HomeHero';
+import HomePills from './components/HomePills';
 import HomeMealsList from './components/HomeMealsList';
 
 function Home() {
   return (
-    <>
-      <Hero />
-      <HomeMain>
-        <HomeMainFilter />
-        <HomeMealsList />
-      </HomeMain>
-    </>
+    <div className='home-page'>
+      <HomeHero />
+      <HomePills />
+      <HomeMealsList />
+    </div>
   );
 }
 
